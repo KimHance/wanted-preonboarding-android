@@ -28,9 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:contentDescription="@null"
-                android:scaleType="centerCrop"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+                tools:src="@drawable/ic_baseline_image_not_supported" />
 
             <TextView
                 android:id="@+id/tv_item_news_title"
@@ -39,6 +38,7 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="15dp"
+                android:ellipsize="end"
                 android:gravity="start"
                 android:maxLines="2"
                 android:paddingHorizontal="20dp"
