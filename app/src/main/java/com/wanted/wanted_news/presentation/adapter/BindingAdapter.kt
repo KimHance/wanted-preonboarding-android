@@ -11,6 +11,7 @@ import com.wanted.wanted_news.R
 fun ImageView.bindImage(imageUrl: String?) {
     imageUrl?.let {
         Glide.with(this).load(imageUrl).error(R.drawable.ic_no_image)
+            .placeholder(R.drawable.ic_loading)
             .centerCrop().into(this)
     }
 }
@@ -19,8 +20,14 @@ fun ImageView.bindImage(imageUrl: String?) {
 fun ImageView.bindDetailImage(imageUrl: String?) {
     imageUrl?.let {
         Glide.with(this).load(imageUrl).error(R.drawable.ic_no_image)
+            .placeholder(R.drawable.ic_loading)
             .transform(CenterCrop(), RoundedCorners(20)).into(this)
     }
+}
+
+@BindingAdapter("bindCategory")
+fun ImageView.bindCategory(imageUrl: Int) {
+    Glide.with(this).load(imageUrl).into(this)
 }
 
 @BindingAdapter("bindBookMark")
