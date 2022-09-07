@@ -10,7 +10,7 @@ import com.wanted.wanted_news.R
 @BindingAdapter("bindImage")
 fun ImageView.bindImage(imageUrl: String?) {
     imageUrl?.let {
-        Glide.with(this).load(imageUrl).error(R.drawable.ic_baseline_image_not_supported)
+        Glide.with(this).load(imageUrl).error(R.drawable.ic_no_image)
             .centerCrop().into(this)
     }
 }
@@ -18,7 +18,7 @@ fun ImageView.bindImage(imageUrl: String?) {
 @BindingAdapter("bindDetailImage")
 fun ImageView.bindDetailImage(imageUrl: String?) {
     imageUrl?.let {
-        Glide.with(this).load(imageUrl).error(R.drawable.ic_baseline_image_not_supported)
+        Glide.with(this).load(imageUrl).error(R.drawable.ic_no_image)
             .transform(CenterCrop(), RoundedCorners(20)).into(this)
     }
 }
