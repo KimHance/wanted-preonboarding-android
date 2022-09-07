@@ -36,5 +36,6 @@ class RetrofitModule {
 
     companion object {
         private const val BASE_URL = "https://newsapi.org/"
+        const val API_KEY = "0ca69815d0fc406c8640298e2380abfe"
     }
 }

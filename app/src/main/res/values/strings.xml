@@ -3,4 +3,13 @@
     <string name="top_news">Top News</string>
     <string name="category">Categories</string>
     <string name="saved">Saved</string>
+
+    <!-- category -->
+    <string name="business">business</string>
+    <string name="entertainment">entertainment</string>
+    <string name="general">general</string>
+    <string name="health">health</string>
+    <string name="science">science</string>
+    <string name="sports">sports</string>
+    <string name="technology">technology</string>
 </resources>
