@@ -24,7 +24,11 @@
         android:id="@+id/categoryFragment"
         android:name="com.wanted.wanted_news.presentation.category.CategoryFragment"
         android:label="CategoryFragment"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryResultFragment"
+            app:destination="@id/categoryResultFragment" />
+    </fragment>
     <fragment
         android:id="@+id/savedFragment"
         android:name="com.wanted.wanted_news.presentation.saved.SavedFragment"
@@ -43,5 +47,18 @@
             android:name="news"
             app:argType="com.wanted.wanted_news.domain.News"
             app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryResultFragment"
+        android:name="com.wanted.wanted_news.presentation.category.CategoryResultFragment"
+        android:label="CategoryResultFragment"
+        tools:layout="@layout/fragment_category_result">
+        <action
+            android:id="@+id/action_categoryResultFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>
