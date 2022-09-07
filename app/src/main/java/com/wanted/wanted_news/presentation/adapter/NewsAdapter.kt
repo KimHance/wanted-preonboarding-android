@@ -10,7 +10,8 @@ import com.wanted.wanted_news.R
 import com.wanted.wanted_news.databinding.ItemNewsBinding
 import com.wanted.wanted_news.domain.News
 
-class NewsAdapter : PagingDataAdapter<News, NewsViewHolder>(newsDiffUtil) {
+class NewsAdapter(private val itemClickListener: (News) -> Unit) :
+    PagingDataAdapter<News, NewsViewHolder>(newsDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         return NewsViewHolder(
@@ -19,7 +20,8 @@ class NewsAdapter : PagingDataAdapter<News, NewsViewHolder>(newsDiffUtil) {
                 R.layout.item_news,
                 parent,
                 false
-            )
+            ),
+            itemClickListener
         )
     }
 
@@ -42,8 +44,20 @@ class NewsAdapter : PagingDataAdapter<News, NewsViewHolder>(newsDiffUtil) {
 }
 
 class NewsViewHolder(
-    private val binding: ItemNewsBinding
+    private val binding: ItemNewsBinding,
+    private val itemClickListener: (News) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
+
+    init {
+        binding.apply {
+            itemView.setOnClickListener {
+                news?.run{
+                    itemClickListener(this)
+                }
+            }
+        }
+    }
+
     fun bind(item: News) {
         binding.apply {
             news = item

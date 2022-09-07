@@ -21,6 +21,8 @@ class MainViewModel @Inject constructor(
     private val _newsList = MutableStateFlow<PagingData<News>>(PagingData.empty())
     val newsList = _newsList.asStateFlow()
 
+    val selectedNews = MutableStateFlow(News())
+
     fun getNewsList(category: String?) {
         viewModelScope.launch {
             getNewsListUseCase(category)
@@ -29,6 +31,10 @@ class MainViewModel @Inject constructor(
                     _newsList.emit(newsList)
                 }
         }
+    }
+
+    fun setSelectedNews(news: News) {
+        selectedNews.value = news
     }
 
 }

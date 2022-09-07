@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="news"
+            type="com.wanted.wanted_news.domain.News" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_news_title"
+            style="@style/News_HeadLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@{news.title}"
+            app:layout_constraintEnd_toStartOf="@id/iv_book_mark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="뉴스 제목" />
+
+        <ImageView
+            android:id="@+id/iv_book_mark"
+            bindBookMark="@{news.saved}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/tv_news_author"
+            style="@style/News_Author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{news.author}"
+            app:layout_constraintStart_toStartOf="@id/tv_news_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_news_title"
+            tools:text="김현수" />
+
+        <TextView
+            android:id="@+id/tv_news_time"
+            style="@style/News_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@{news.time}"
+            app:layout_constraintStart_toEndOf="@id/tv_news_author"
+            app:layout_constraintTop_toTopOf="@id/tv_news_author"
+            tools:text="3 hours ago" />
+
+        <ImageView
+            android:id="@+id/iv_news_image"
+            bindDetailImage="@{news.imageUrl}"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_news_time"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/iv_news_image"
+            android:layout_marginTop="20dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_news_image">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:id="@+id/tv_news_content"
+                    style="@style/News_Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="start"
+                    android:text="@{news.content}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="기사 내용입니다." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
