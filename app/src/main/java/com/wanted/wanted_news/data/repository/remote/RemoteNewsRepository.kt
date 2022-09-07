@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface RemoteNewsRepository {
 
-    suspend fun getNews(category: String): Flow<PagingData<News>>?
+    suspend fun getNews(category: String?): Flow<PagingData<News>>?
 
 }

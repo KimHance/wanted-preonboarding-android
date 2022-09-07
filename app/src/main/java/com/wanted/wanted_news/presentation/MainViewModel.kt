@@ -21,7 +21,7 @@ class MainViewModel @Inject constructor(
     private val _newsList = MutableStateFlow<PagingData<News>>(PagingData.empty())
     val newsList = _newsList.asStateFlow()
 
-    fun getNewsList(category: String) {
+    fun getNewsList(category: String?) {
         viewModelScope.launch {
             getNewsListUseCase(category)
                 ?.cachedIn(viewModelScope)

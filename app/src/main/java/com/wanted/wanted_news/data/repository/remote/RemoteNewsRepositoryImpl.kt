@@ -17,7 +17,7 @@ class RemoteNewsRepositoryImpl @Inject constructor(
         const val PAGE_SIZE = 30
     }
 
-    override suspend fun getNews(category: String): Flow<PagingData<News>> {
+    override suspend fun getNews(category: String?): Flow<PagingData<News>> {
         return Pager(PagingConfig(PAGE_SIZE)) {
             NewsPagingSource(service, category)
         }.flow

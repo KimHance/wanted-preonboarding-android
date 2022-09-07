@@ -8,6 +8,6 @@ import javax.inject.Inject
 class GetNewsListUseCase @Inject constructor(
     private val remoteNewsRepository: RemoteNewsRepository
 ) {
-    suspend operator fun invoke(category: String) =
+    suspend operator fun invoke(category: String?) =
         remoteNewsRepository.getNews(category)?.flowOn(Dispatchers.Default)
 }
