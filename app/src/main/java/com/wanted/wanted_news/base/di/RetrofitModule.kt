@@ -1,5 +1,6 @@
 package com.wanted.wanted_news.base.di
 
+import com.wanted.wanted_news.utils.AuthInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,6 +23,7 @@ class RetrofitModule {
         }
         return OkHttpClient.Builder()
             .addNetworkInterceptor(loggingInterceptor)
+            .addInterceptor(AuthInterceptor())
             .build()
     }
 
@@ -36,6 +38,5 @@ class RetrofitModule {
 
     companion object {
         private const val BASE_URL = "https://newsapi.org/"
-        const val API_KEY = "0ca69815d0fc406c8640298e2380abfe"
     }
 }

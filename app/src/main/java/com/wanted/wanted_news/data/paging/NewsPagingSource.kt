@@ -27,7 +27,7 @@ class NewsPagingSource(
         val position = params.key ?: STARTING_KEY
         if (position != STARTING_KEY) delay(DELAY_MILLIS)
         return try {
-            val news = service.getNews(category = category).toNews()
+            val news = service.getNews(category = category, page = position).toNews()
             LoadResult.Page(
                 data = news,
                 prevKey = if (position == STARTING_KEY) null else position - 1,
@@ -38,5 +38,4 @@ class NewsPagingSource(
         }
 
     }
-
 }
