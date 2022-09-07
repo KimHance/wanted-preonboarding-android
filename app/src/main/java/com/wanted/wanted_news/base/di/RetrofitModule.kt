@@ -35,6 +35,6 @@ class RetrofitModule {
             .build()
 
     companion object {
-        private const val BASE_URL = "https://newsapi.org/v2/"
+        private const val BASE_URL = "https://newsapi.org/"
     }
 }
