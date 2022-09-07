@@ -30,4 +30,16 @@
         <item name="android:textColor">@color/gray</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="Category_Description">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Category_item">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
