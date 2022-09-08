@@ -1,4 +1,4 @@
-package com.wanted.wanted_news.presentation.saved
+package com.wanted.wanted_news.presentation.feature.saved
 
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.base.BaseFragment

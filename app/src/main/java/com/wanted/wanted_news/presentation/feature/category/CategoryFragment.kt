@@ -1,4 +1,4 @@
-package com.wanted.wanted_news.presentation.category
+package com.wanted.wanted_news.presentation.feature.category
 
 import android.os.Bundle
 import android.view.View
@@ -8,6 +8,7 @@ import com.wanted.wanted_news.R
 import com.wanted.wanted_news.base.BaseFragment
 import com.wanted.wanted_news.databinding.FragmentCategoryBinding
 import com.wanted.wanted_news.domain.CATEGORY
+import com.wanted.wanted_news.presentation.feature.adapter.CategoryAdapter
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
 

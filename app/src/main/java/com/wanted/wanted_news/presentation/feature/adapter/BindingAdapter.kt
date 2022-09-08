@@ -1,4 +1,4 @@
-package com.wanted.wanted_news.presentation.adapter
+package com.wanted.wanted_news.presentation.feature.adapter
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

@@ -1,4 +1,4 @@
-package com.wanted.wanted_news.presentation.detail
+package com.wanted.wanted_news.presentation.feature.detail
 
 import android.os.Bundle
 import android.view.View
