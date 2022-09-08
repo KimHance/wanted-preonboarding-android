@@ -90,4 +90,10 @@ dependencies {
 
     //Kotlin-Serialization
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version"
+
+    // Room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 }
