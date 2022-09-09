@@ -26,12 +26,12 @@ interface NewsDao {
     @Query("SELECT * FROM News")
     suspend fun getNews(): List<News>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveNews(news: News)
 
     @Delete
     suspend fun deleteNews(news: News)
 
-   /* @Query("SELECT * FROM News WHERE id = :id")
-    suspend fun checkSaved(id: Int)*/
+    @Query("SELECT * FROM News WHERE title =:title")
+    suspend fun checkSaved(title: String): News?
 }
