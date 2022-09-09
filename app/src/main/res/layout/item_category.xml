@@ -7,7 +7,7 @@
 
         <variable
             name="category"
-            type="com.wanted.wanted_news.domain.CATEGORY" />
+            type="com.wanted.wanted_news.domain.model.CATEGORY" />
 
     </data>
 

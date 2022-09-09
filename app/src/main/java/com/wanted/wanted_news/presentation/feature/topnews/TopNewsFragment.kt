@@ -10,7 +10,7 @@ import androidx.navigation.findNavController
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.base.BaseFragment
 import com.wanted.wanted_news.databinding.FragmentTopNewsBinding
-import com.wanted.wanted_news.domain.News
+import com.wanted.wanted_news.domain.model.News
 import com.wanted.wanted_news.presentation.MainViewModel
 import com.wanted.wanted_news.presentation.feature.adapter.NewsAdapter
 import dagger.hilt.android.AndroidEntryPoint

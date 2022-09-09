@@ -3,7 +3,7 @@ package com.wanted.wanted_news.data.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.wanted.wanted_news.data.service.NewsService
-import com.wanted.wanted_news.domain.News
+import com.wanted.wanted_news.domain.model.News
 import com.wanted.wanted_news.domain.toNews
 import kotlinx.coroutines.delay
 import java.io.IOException

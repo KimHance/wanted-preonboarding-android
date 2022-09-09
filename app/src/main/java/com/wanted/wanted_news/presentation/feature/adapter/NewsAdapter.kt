@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.databinding.ItemNewsBinding
-import com.wanted.wanted_news.domain.News
+import com.wanted.wanted_news.domain.model.News
 
 class NewsAdapter(private val itemClickListener: (News) -> Unit) :
     PagingDataAdapter<News, NewsViewHolder>(newsDiffUtil) {

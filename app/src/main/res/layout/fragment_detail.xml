@@ -7,7 +7,7 @@
 
         <variable
             name="news"
-            type="com.wanted.wanted_news.domain.News" />
+            type="com.wanted.wanted_news.domain.model.News" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

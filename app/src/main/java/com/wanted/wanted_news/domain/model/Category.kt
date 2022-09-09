@@ -1,4 +1,4 @@
-package com.wanted.wanted_news.domain
+package com.wanted.wanted_news.domain.model
 
 import com.wanted.wanted_news.R
 

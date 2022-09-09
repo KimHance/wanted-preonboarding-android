@@ -2,7 +2,7 @@ package com.wanted.wanted_news.data.database
 
 import android.content.Context
 import androidx.room.*
-import com.wanted.wanted_news.domain.News
+import com.wanted.wanted_news.domain.model.News
 
 @Database(
     entities = [News::class],

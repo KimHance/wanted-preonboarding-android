@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.databinding.ItemCategoryBinding
-import com.wanted.wanted_news.domain.CATEGORY
+import com.wanted.wanted_news.domain.model.CATEGORY
 
 class CategoryAdapter(private val itemClickListener: (CATEGORY) -> Unit) :
     ListAdapter<CATEGORY, CategoryViewHolder>(categoryDiffUtil) {

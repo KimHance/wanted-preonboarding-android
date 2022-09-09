@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.base.BaseFragment
 import com.wanted.wanted_news.databinding.FragmentCategoryBinding
-import com.wanted.wanted_news.domain.CATEGORY
+import com.wanted.wanted_news.domain.model.CATEGORY
 import com.wanted.wanted_news.presentation.feature.adapter.CategoryAdapter
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
