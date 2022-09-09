@@ -2,6 +2,7 @@ package com.wanted.wanted_news.presentation.feature.saved
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -40,10 +41,15 @@ class SavedFragment : BaseFragment<FragmentSavedBinding>(R.layout.fragment_saved
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 savedViewModel.savedNews.collect { savedList ->
+                    showEmptyText(savedList.isEmpty())
                     savedNewsAdapter.submitList(savedList.toList())
                 }
             }
         }
+    }
+
+    private fun showEmptyText(state: Boolean) {
+        binding.commonSavedLayout.tvEmptyMessage.isVisible = state
     }
 
     private fun doOnClick(item: News) {

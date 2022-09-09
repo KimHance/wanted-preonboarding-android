@@ -6,4 +6,5 @@
 
     <!-- category -->
     <string name="category_description">Choose a category to\nstart reading</string>
+    <string name="empty_news_message">There\'s no News</string>
 </resources>
