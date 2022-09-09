@@ -5,10 +5,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.wanted.wanted_news.domain.News
-import com.wanted.wanted_news.domain.usecase.DeleteNewsUseCase
-import com.wanted.wanted_news.domain.usecase.GetNewsListUseCase
-import com.wanted.wanted_news.domain.usecase.GetSavedNewsUseCase
-import com.wanted.wanted_news.domain.usecase.SaveNewsUseCase
+import com.wanted.wanted_news.domain.usecase.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,7 +19,8 @@ class MainViewModel @Inject constructor(
     private val getNewsListUseCase: GetNewsListUseCase,
     private val getSavedNewsUseCase: GetSavedNewsUseCase,
     private val saveNewsUseCase: SaveNewsUseCase,
-    private val deleteNewsUseCase: DeleteNewsUseCase
+    private val deleteNewsUseCase: DeleteNewsUseCase,
+    private val checkSavedUseCase: CheckSavedUseCase
 ) : ViewModel() {
 
     private val _newsList = MutableStateFlow<PagingData<News>>(PagingData.empty())
@@ -57,6 +55,16 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    fun checkSaved(news: News) {
+        viewModelScope.launch {
+            if (checkSavedUseCase(news)) {
+                selectedNews.update {
+                    selectedNews.value.copy(isSaved = true)
+                }
+            }
+        }
+    }
+
     fun changeSaveState(check: Boolean) {
         if (check) saveNews()
         else deleteSavedNews()
@@ -64,10 +72,10 @@ class MainViewModel @Inject constructor(
 
     private fun deleteSavedNews() {
         viewModelScope.launch {
+            deleteNewsUseCase(selectedNews.value)
             selectedNews.update {
                 selectedNews.value.copy(isSaved = false)
             }
-            deleteNewsUseCase(selectedNews.value)
         }
     }
 

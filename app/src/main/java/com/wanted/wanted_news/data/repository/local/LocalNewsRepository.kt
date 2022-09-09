@@ -8,4 +8,6 @@ interface LocalNewsRepository {
     suspend fun saveNews(news: News)
 
     suspend fun deleteNews(news: News)
+
+    suspend fun checkSaved(news: News): Boolean
 }

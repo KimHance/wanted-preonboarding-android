@@ -15,4 +15,12 @@ class LocalNewsRepositoryImpl @Inject constructor(
 
     override suspend fun deleteNews(news: News) =
         newsDao.deleteNews(news)
+
+    override suspend fun checkSaved(news: News): Boolean {
+        return runCatching {
+            newsDao.checkSaved(news.title)
+        }.mapCatching {
+            it != null
+        }.getOrDefault(false)
+    }
 }

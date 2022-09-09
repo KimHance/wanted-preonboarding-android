@@ -22,11 +22,16 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(R.layout.fragment_det
         super.onViewCreated(view, savedInstanceState)
         collectFlow()
         fetchNews()
+        initView()
     }
 
     private fun initView() {
-        binding.ivBookMark.setOnClickListener {
-
+        binding.apply {
+            ivBookMark.setOnClickListener {
+                detailViewModel.apply {
+                    changeSaveState(!selectedNews.value.isSaved)
+                }
+            }
         }
     }
 
@@ -43,5 +48,6 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(R.layout.fragment_det
     private fun fetchNews() {
         val args: DetailFragmentArgs by navArgs()
         detailViewModel.setSelectedNews(args.news)
+        detailViewModel.checkSaved(args.news)
     }
 }
