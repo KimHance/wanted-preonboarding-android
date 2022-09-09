@@ -34,7 +34,7 @@ class NewsAdapter(private val itemClickListener: (News) -> Unit) :
     companion object {
         private val newsDiffUtil = object : DiffUtil.ItemCallback<News>() {
             override fun areItemsTheSame(oldItem: News, newItem: News): Boolean =
-                oldItem.id == newItem.id
+                oldItem.title == newItem.title
 
             override fun areContentsTheSame(oldItem: News, newItem: News): Boolean =
                 oldItem == newItem
