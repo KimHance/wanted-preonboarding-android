@@ -24,6 +24,12 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(R.layout.fragment_det
         fetchNews()
     }
 
+    private fun initView() {
+        binding.ivBookMark.setOnClickListener {
+
+        }
+    }
+
     private fun collectFlow() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {

@@ -2,7 +2,7 @@ package com.wanted.wanted_news.presentation.feature.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
 import com.wanted.wanted_news.databinding.ItemNewsBinding
-import com.wanted.wanted_news.domain.model.News
+import com.wanted.wanted_news.domain.News
 
 class NewsViewHolder(
     private val binding: ItemNewsBinding,

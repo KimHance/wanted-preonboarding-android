@@ -3,14 +3,14 @@ package com.wanted.wanted_news.presentation.feature.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.domain.News
 import com.wanted.wanted_news.presentation.feature.viewholder.NewsViewHolder
 
-class NewsAdapter(private val itemClickListener: (News) -> Unit) :
-    PagingDataAdapter<News, NewsViewHolder>(newsDiffUtil) {
+class SavedAdapter(private val itemClickListener: (News) -> Unit) :
+    ListAdapter<News, NewsViewHolder>(newsDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         return NewsViewHolder(
@@ -33,7 +33,7 @@ class NewsAdapter(private val itemClickListener: (News) -> Unit) :
     companion object {
         private val newsDiffUtil = object : DiffUtil.ItemCallback<News>() {
             override fun areItemsTheSame(oldItem: News, newItem: News): Boolean =
-                oldItem.id == newItem.id
+                oldItem.title == newItem.title
 
             override fun areContentsTheSame(oldItem: News, newItem: News): Boolean =
                 oldItem == newItem

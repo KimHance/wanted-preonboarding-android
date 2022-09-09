@@ -1,7 +1,7 @@
-package com.wanted.wanted_news.domain
+package com.wanted.wanted_news.domain.mapper
 
 import com.wanted.wanted_news.data.dto.NewsResponse
-import com.wanted.wanted_news.domain.model.News
+import com.wanted.wanted_news.domain.News
 
 fun NewsResponse.toNews(): List<News> {
     val list = mutableListOf<News>()

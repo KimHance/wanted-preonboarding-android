@@ -5,7 +5,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.wanted.wanted_news.data.paging.NewsPagingSource
 import com.wanted.wanted_news.data.service.NewsService
-import com.wanted.wanted_news.domain.model.News
+import com.wanted.wanted_news.domain.News
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

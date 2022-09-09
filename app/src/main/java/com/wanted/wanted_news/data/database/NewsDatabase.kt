@@ -2,8 +2,7 @@ package com.wanted.wanted_news.data.database
 
 import android.content.Context
 import androidx.room.*
-import com.wanted.wanted_news.domain.model.News
-import kotlinx.coroutines.flow.Flow
+import com.wanted.wanted_news.domain.News
 
 @Database(
     entities = [News::class],
@@ -25,11 +24,14 @@ abstract class NewsDatabase : RoomDatabase() {
 interface NewsDao {
 
     @Query("SELECT * FROM News")
-    suspend fun getNews(): Flow<List<News>>
+    suspend fun getNews(): List<News>
 
     @Insert
     suspend fun saveNews(news: News)
 
     @Delete
     suspend fun deleteNews(news: News)
+
+   /* @Query("SELECT * FROM News WHERE id = :id")
+    suspend fun checkSaved(id: Int)*/
 }

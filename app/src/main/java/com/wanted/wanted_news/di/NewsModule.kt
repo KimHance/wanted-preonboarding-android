@@ -1,5 +1,7 @@
 package com.wanted.wanted_news.di
 
+import com.wanted.wanted_news.data.repository.local.LocalNewsRepository
+import com.wanted.wanted_news.data.repository.local.LocalNewsRepositoryImpl
 import com.wanted.wanted_news.data.repository.remote.RemoteNewsRepository
 import com.wanted.wanted_news.data.repository.remote.RemoteNewsRepositoryImpl
 import com.wanted.wanted_news.data.service.NewsService
@@ -20,6 +22,12 @@ abstract class NewsModule {
     abstract fun bindRemoteNewsRepository(
         repositoryImpl: RemoteNewsRepositoryImpl
     ): RemoteNewsRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindLocalNewsRepository(
+        repositoryImpl: LocalNewsRepositoryImpl
+    ): LocalNewsRepository
 
     companion object {
         @Provides
