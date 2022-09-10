@@ -6,5 +6,6 @@
 
     <!-- category -->
     <string name="category_description">Choose a category to\nstart reading</string>
-    <string name="empty_news_message">There\'s no News</string>
+    <string name="empty_news_message">There\'s no saved news</string>
+    <string name="fetching_error">Fetching news failed</string>
 </resources>

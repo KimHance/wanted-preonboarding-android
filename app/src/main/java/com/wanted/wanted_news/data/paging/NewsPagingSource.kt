@@ -3,10 +3,9 @@ package com.wanted.wanted_news.data.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.wanted.wanted_news.data.service.NewsService
-import com.wanted.wanted_news.domain.mapper.toNews
 import com.wanted.wanted_news.domain.News
+import com.wanted.wanted_news.domain.mapper.toNews
 import kotlinx.coroutines.delay
-import java.io.IOException
 
 const val STARTING_KEY = 1
 const val DELAY_MILLIS = 1_000L
@@ -33,7 +32,7 @@ class NewsPagingSource(
                 prevKey = if (position == STARTING_KEY) null else position - 1,
                 nextKey = if (news.isEmpty()) null else position + 1
             )
-        } catch (e: IOException) {
+        } catch (e: Throwable) {
             return LoadResult.Error(e)
         }
 

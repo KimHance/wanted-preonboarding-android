@@ -2,11 +2,13 @@ package com.wanted.wanted_news.presentation.feature.topnews
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.findNavController
+import androidx.paging.LoadState
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.base.BaseFragment
 import com.wanted.wanted_news.databinding.FragmentTopNewsBinding
@@ -48,6 +50,14 @@ class TopNewsFragment : BaseFragment<FragmentTopNewsBinding>(R.layout.fragment_t
                 }
             }
         }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                newsAdapter.loadStateFlow
+                    .collectLatest {
+                        showEmptyText(it.refresh is LoadState.Error)
+                    }
+            }
+        }
     }
 
     private fun doOnClick(item: News) {
@@ -56,5 +66,12 @@ class TopNewsFragment : BaseFragment<FragmentTopNewsBinding>(R.layout.fragment_t
                 item
             )
         requireView().findNavController().navigate(action)
+    }
+
+    private fun showEmptyText(state: Boolean) {
+        binding.commonTopNewsLayout.tvEmptyMessage.apply {
+            text = context.getString(R.string.fetching_error)
+            isVisible = state
+        }
     }
 }
