@@ -9,29 +9,44 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/tv_category_description"
-            style="@style/Category_Description"
+            style="@style/CategoryDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:text="@string/category_description"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tb_category_title" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_category"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_category_description"
             tools:listitem="@layout/item_category" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/tb_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/category"
+            app:titleTextAppearance="@style/ActionBar"
+            app:titleTextColor="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

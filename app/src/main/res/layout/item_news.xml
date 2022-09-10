@@ -33,7 +33,7 @@
 
             <TextView
                 android:id="@+id/tv_item_news_title"
-                style="@style/News_HeadLine"
+                style="@style/NewsHeadLine"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
@@ -51,7 +51,7 @@
 
             <TextView
                 android:id="@+id/tv_item_news_author"
-                style="@style/News_Author"
+                style="@style/NewsAuthor"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -68,7 +68,7 @@
 
             <TextView
                 android:id="@+id/tv_item_news_time"
-                style="@style/News_Time"
+                style="@style/NewsTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"

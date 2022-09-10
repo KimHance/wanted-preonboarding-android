@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/menu_bottom_nav">
+        <item
+            android:id="@+id/topNewsFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_news"
+            android:title="@string/top_news" />
+        <item
+            android:id="@+id/categoryFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_category"
+            android:title="@string/category" />
+        <item
+            android:id="@+id/savedFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_save"
+            android:title="@string/saved" />
+    </group>
+</menu>

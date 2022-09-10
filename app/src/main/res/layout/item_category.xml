@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/Category_item"
+            style="@style/CategoryItem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"

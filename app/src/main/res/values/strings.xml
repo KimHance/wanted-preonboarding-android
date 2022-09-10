@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">wanted_news</string>
+    <string name="app_name">NewsApp</string>
     <string name="top_news">Top News</string>
-    <string name="category">Categories</string>
+    <string name="category">Category</string>
     <string name="saved">Saved</string>
 
     <!-- category -->
