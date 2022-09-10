@@ -34,8 +34,9 @@ class TopNewsFragment : BaseFragment<FragmentTopNewsBinding>(R.layout.fragment_t
     }
 
     private fun initView() {
-        binding.commonTopNewsLayout.rvNews.apply {
-            adapter = newsAdapter
+        binding.commonTopNewsLayout.apply {
+            rvNews.adapter = newsAdapter
+            tbTitleBar.title = getString(R.string.top_news)
         }
     }
 

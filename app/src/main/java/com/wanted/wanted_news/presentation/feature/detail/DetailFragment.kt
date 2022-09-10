@@ -6,6 +6,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.wanted.wanted_news.R
 import com.wanted.wanted_news.base.BaseFragment
@@ -31,6 +32,13 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(R.layout.fragment_det
                 detailViewModel.apply {
                     changeSaveState(!selectedNews.value.isSaved)
                 }
+            }
+            tbTitleBar.apply {
+                setNavigationIcon(R.drawable.ic_baseline_arrow_back)
+                setNavigationOnClickListener {
+                    it.findNavController().popBackStack()
+                }
+                title = detailViewModel.selectedNews.value.title
             }
         }
     }

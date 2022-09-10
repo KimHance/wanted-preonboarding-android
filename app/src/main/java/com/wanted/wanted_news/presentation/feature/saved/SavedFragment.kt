@@ -32,8 +32,9 @@ class SavedFragment : BaseFragment<FragmentSavedBinding>(R.layout.fragment_saved
     }
 
     private fun initView() {
-        binding.commonSavedLayout.rvNews.apply {
-            adapter = savedNewsAdapter
+        binding.commonSavedLayout.apply {
+            rvNews.adapter = savedNewsAdapter
+            tbTitleBar.title = getString(R.string.saved)
         }
     }
 

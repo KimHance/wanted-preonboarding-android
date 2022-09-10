@@ -35,8 +35,14 @@ class CategoryResultFragment :
     }
 
     private fun initView() {
-        binding.commonCategoryNewsLayout.rvNews.apply {
-            adapter = newsAdapter
+        binding.commonCategoryNewsLayout.apply {
+            rvNews.adapter = newsAdapter
+            tbTitleBar.apply {
+                setNavigationIcon(R.drawable.ic_baseline_arrow_back)
+                setNavigationOnClickListener {
+                    it.findNavController().popBackStack()
+                }
+            }
         }
     }
 
@@ -53,6 +59,8 @@ class CategoryResultFragment :
     private fun fetchNews() {
         val args: CategoryResultFragmentArgs by navArgs()
         resultViewModel.getNewsList(args.category)
+        binding.commonCategoryNewsLayout.tbTitleBar.title =
+            getString(R.string.category) + " - " + "${args.category}"
     }
 
     private fun doOnClick(item: News) {
