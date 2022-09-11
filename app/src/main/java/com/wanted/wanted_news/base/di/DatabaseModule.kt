@@ -1,4 +1,4 @@
-package com.wanted.wanted_news.di
+package com.wanted.wanted_news.base.di
 
 import android.content.Context
 import com.wanted.wanted_news.data.database.NewsDatabase
