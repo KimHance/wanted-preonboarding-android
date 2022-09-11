@@ -1,5 +1,7 @@
 # 원티드 프리온보딩 사전과제
 
+# Team(학연지연우연인연)
+
 # 📱Introduction
 
 - [newsapi](https://newsapi.org/)의 top-headlines API를 활용하여 뉴스 목록을 나타냅니다.
@@ -71,16 +73,7 @@
 
 # 📟 Navigation Graph
 
-![Untitled](%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%87%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%204cdb0649b4eb4c19bd0b22e6f5570bf6/Untitled.png)
+![navgragh](https://user-images.githubusercontent.com/86879099/189529446-1745318f-5c62-443f-882d-d6980190d61a.png)
 
 # 📱 Result
-
-![Untitled](%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%87%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%204cdb0649b4eb4c19bd0b22e6f5570bf6/Untitled%201.png)
-
-![Untitled](%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%87%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%204cdb0649b4eb4c19bd0b22e6f5570bf6/Untitled%202.png)
-
-![Untitled](%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%87%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%204cdb0649b4eb4c19bd0b22e6f5570bf6/Untitled%203.png)
-
-![Untitled](%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%87%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%204cdb0649b4eb4c19bd0b22e6f5570bf6/Untitled%204.png)
-
-![Untitled](%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%87%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%204cdb0649b4eb4c19bd0b22e6f5570bf6/Untitled%205.png)
+![topnews](https://user-images.githubusercontent.com/86879099/189529491-e09cc0ac-e278-467d-b0e3-be1126d6e42d.png)![cat](https://user-images.githubusercontent.com/86879099/189529497-d9603ab7-3f52-4d68-9fde-da9296dcbe7a.png)![sport](https://user-images.githubusercontent.com/86879099/189529494-b38d24a6-051e-4340-95ea-c0340a42dfe9.png)![detail](https://user-images.githubusercontent.com/86879099/189529503-3588d99f-4ac4-4ed6-b543-2f486bc74735.png)![saved](https://user-images.githubusercontent.com/86879099/189529504-434ecfa3-7beb-42ac-8870-9950bc658e48.png)
